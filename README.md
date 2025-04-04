@@ -6,6 +6,7 @@ What Happened?
 An exploitation attempt targeting CVE-2024-24919, a zero-day vulnerability in Check Point Security Gateways, was detected in your network. The attacker executed a Local File Inclusion (LFI) payload through an HTTP POST request, attempting to retrieve the sensitive file /etc/passwd. The exploit pattern was identified and flagged, but the request was unfortunately allowed by the system, suggesting a successful breach.
 
 How It Happened
+
 Exploit Details:
 
 The attacker used the payload aCSHELL/../../../../../../../../../../etc/passwd, a directory traversal exploit, to access system files.
@@ -29,6 +30,7 @@ The SOC287 rule detected a known exploitation pattern, indicative of a zero-day 
 The device action allowed the malicious request, signifying that proper controls (e.g., virtual patching or IPS rules) were not in place.
 
 Steps to Investigate
+
 Validate the Incident:
 
 Confirm the activity as a true positive by reviewing logs and corroborating evidence of file access attempts.
@@ -54,6 +56,7 @@ Log Review:
 Analyze related network and application logs to identify any other suspicious activity involving the attacker’s IP or payload.
 
 Immediate Mitigation Steps
+
 Isolate the Affected Host:
 
 Disconnect the gateway (172.16.20.146) from the network to prevent further exploitation.
@@ -81,6 +84,7 @@ Communicate the incident to relevant teams, such as the SOC Tier 2 team, for fur
 Alert system owners and stakeholders about the vulnerability and its potential impact.
 
 Long-Term Remediation
+
 Strengthen Monitoring and Detection:
 
 Update SIEM rules to detect similar exploitation patterns in real time.
