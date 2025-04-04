@@ -1,6 +1,7 @@
 # EventID.263-SOC287-Walkthrough
-letsdefend.io Event 263 walkthrough
-Walkthrough: Investigating and Responding to CVE-2024-24919 Exploitation Attempt
+letsdefend.io Event 263 walkthrough:
+
+Investigating and Responding to CVE-2024-24919 Exploitation Attempt
 What Happened?
 An exploitation attempt targeting CVE-2024-24919, a zero-day vulnerability in Check Point Security Gateways, was detected in your network. The attacker executed a Local File Inclusion (LFI) payload through an HTTP POST request, attempting to retrieve the sensitive file /etc/passwd. The exploit pattern was identified and flagged, but the request was unfortunately allowed by the system, suggesting a successful breach.
 
